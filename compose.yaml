@@ -1,0 +1,11 @@
+services:
+  quarkus:
+    image: ibm/teste:1.0.0-SNAPSHOT
+    environment:
+      - GREETING_MESSAGE
+    ports:
+      - "8080:8080"
+    networks:
+      - ibm
+networks:
+  ibm: {}

@@ -22,10 +22,22 @@ help(){
 
 start(){
   echo "Iniciando o aplicativo junto com o prometheus"
+    if [ -z "$message" ]
+    then
+      docker compose up
+    else
+      GREETING_MESSAGE="${message}" docker compose up
+    fi
 }
 
 dev(){
   echo "Iniciando o aplicativo no modo de desenvolvimento"
+  if [ -z "$message" ]
+  then
+    ./mvnw quarkus:dev
+  else
+    GREETING_MESSAGE=${message} ./mvnw quarkus:dev
+  fi
 }
 
 message(){
