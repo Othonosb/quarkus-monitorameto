@@ -20,7 +20,13 @@ help(){
   "
 }
 
+build(){
+  echo "Construindo o container do quarkus"
+  ./mvnw clean install
+}
+
 start(){
+  build
   echo "Iniciando o aplicativo junto com o prometheus"
     if [ -z "$message" ]
     then
