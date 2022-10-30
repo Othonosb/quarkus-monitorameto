@@ -11,5 +11,3 @@ services:
       - "9090:9090"
     volumes:
       - ${PWD}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-volumes:
-  prom-config: {}
