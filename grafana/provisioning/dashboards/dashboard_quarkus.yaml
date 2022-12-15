@@ -1,0 +1,11 @@
+apiVersion: 1
+providers:
+  - name: 'Quarkus Dashboard'
+    folder: 'Quarkus Dashboard'
+    type: file
+    disableDeletion: true
+    editable: true
+    updaterIntervalSeconds: 15
+    allowUiUpdates: true
+    options:
+        path: /var/lib/grafana/dashboards/grafana/quarkus/
